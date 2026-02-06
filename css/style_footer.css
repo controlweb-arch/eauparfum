@@ -1,0 +1,219 @@
+.footer-elegant {
+    background-color: #ffffff;
+    color: #333;
+    padding: 60px 20px 20px;
+    font-family: 'Helvetica', Arial, sans-serif;
+    border-top: 1px solid #eee;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /*con esto alineo las columnas de footer*/
+    gap: 40px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #000; /* Cambio suave a negro al pasar el mouse */
+}
+.footer-column i {
+    margin-right: 12px;
+    width: 18px; /* Mantiene los iconos alineados verticalmente */
+    font-size: 16px;
+    text-align: center;
+}
+/* Colores sutiles para los iconos al pasar el mouse */
+.social-links a {
+    text-decoration: none;
+    color: #666;
+    transition: 0.3s;
+}
+.social-links a:hover { color: #000; }
+.fa-instagram { color: #E1306C; }
+.fa-facebook-f { color: #4267B2; }
+.fa-whatsapp { color: #25D366; }
+
+.contact-info a {
+    color: #666;
+    text-decoration: none;
+}
+/* Barra inferior */
+.footer-bottom {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #999;
+}
+
+.footer-bottom a {
+    color: #666;
+    text-decoration: none;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Apila las columnas verticalmente */
+        text-align: center;     /* Centra todo el texto */
+        gap: 30px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .footer-column ul li {
+        justify-content: center; /* Centra los iconos con el texto */
+    }
+
+    .footer-logo {
+        font-size: 1.3rem;
+    }
+
+    .footer-column h4 {
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Opcional: una línea pequeña bajo los títulos en móvil */
+    .footer-column h4::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: #eee;
+        margin: 8px auto 0;
+    }
+}
+    /* --- Footer Bottom (Ajustado) --- */
+    .footer-bottom {
+        margin-top: 50px;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #888;
+        
+        /* Usamos flex-direction column para que se apilen */
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 10px; /* Espacio entre el copyright y el crédito */
+    }
+
+    .footer-bottom p {
+        margin: 0; /* Quitamos márgenes por defecto para controlar el espacio con el gap */
+        font-size: 0.85rem;
+        color: #888;
+        line-height: 1.4;
+    }
+
+    .footer-bottom a {
+        color: #333;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block; /* Evita que el enlace se rompa en dos líneas */
+    }
+    .footer-bottom .credits a {
+        color: #333;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .footer-bottom .credits a {
+        color: #333;
+        font-weight: 600;
+        text-decoration: none;
+    }
+/* Ajuste extra para móviles muy pequeños */
+@media (max-width: 480px) {
+    .footer-bottom {
+        font-size: 0.75rem; /* Un poco más pequeño para que quepa en una sola línea cada frase */
+        padding: 20px 10px;
+    }
+}
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row; /* Vuelve a ponerlos uno al lado del otro en PC */
+        justify-content: center;
+        gap: 20px;
+    }
+}
+/* ================= LOGO FOOTER ================= */
+.footer-brand {
+    max-width: 320px;
+    flex-direction: column;
+}
+
+.footer-logo-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 160px;
+
+    /* ajuste óptico fino */
+    transform: translateX(-2px);
+}
+
+/* En desktop queda alineado a la izquierda */
+@media (min-width: 769px) {
+    .footer-brand {
+        text-align: left;
+    }
+}
+
+/* En mobile centrado */
+@media (max-width: 768px) {
+    .footer-logo-img {
+        margin: 0 auto 14px;
+    }
+}

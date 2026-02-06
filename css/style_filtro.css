@@ -1,0 +1,64 @@
+/* Contenedor principal */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif; /* O la que uses en tu web */
+}
+
+/* Estilo para el texto "Filtrar por categoría" */
+.filtro-label {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Contenedor del select para añadir la flechita personalizada */
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo del Select */
+#filtro {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1.5px solid #d4af37; /* Borde Dorado */
+    border-radius: 50px;       /* Bordes ultra redondeados */
+    padding: 10px 40px 10px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    appearance: none;          /* Quita la flecha fea de Windows/Chrome */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+/* Flechita dorada personalizada */
+.select-wrapper::after {
+    content: '▼';
+    font-size: 0.7rem;
+    color: #d4af37;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Efecto Hover */
+#filtro:hover {
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+    background-color: #111;
+}
+
+/* Opción para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
